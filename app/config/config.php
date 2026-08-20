@@ -64,7 +64,7 @@ $config['version']                 = '4.6.0';
 | -------------------------------------------------------------------
 | Values: development and production
 */
-$config['environment'] = getenv('APP_ENV') ?: 'development';
+$config['environment'] = getenv('APP_ENV') ?: 'production';
 
 /*
 |--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ $config['environment'] = getenv('APP_ENV') ?: 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url'] 				= '';
+$config['base_url'] 				= rtrim(getenv('APP_URL') ?: 'http://localhost/LavaLust-dev-v4', '/') . '/';
 
 /*
 |--------------------------------------------------------------------------
