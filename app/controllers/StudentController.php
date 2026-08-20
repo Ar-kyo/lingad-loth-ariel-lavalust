@@ -5,7 +5,8 @@ class StudentController extends Controller
 {
     public function index()
     {
-      
+        $_SESSION['student_access'] = true;
+
         $data = [
             'page_title' => 'Student Home Page',
             'welcome_message' => 'Welcome to the Student Information Portal'
