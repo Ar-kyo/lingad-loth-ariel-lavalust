@@ -250,6 +250,13 @@ class Invoker {
 			return;
 		}
 
+		$root_view_path = $app_dir . "views/" . $file_name;
+		if (file_exists($root_view_path)) {
+			require $root_view_path;
+			echo ob_get_clean();
+			return;
+		}
+
 		throw new RuntimeException("View {$view_file} not found in module or app/views");
 	}
 
